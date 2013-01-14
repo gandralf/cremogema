@@ -1,4 +1,4 @@
-require 'cremogema/cremogema'
+# require 'cremogema/cremogema'
 
 class Cremogema
   def what

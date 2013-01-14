@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'rake'
+gem 'ffi'
 
 group :test do
   gem 'rspec'

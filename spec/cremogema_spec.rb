@@ -1,4 +1,5 @@
 require 'cremogema'
+require 'cremogema/native'
 
 describe Cremogema do
   it 'should be really tasty' do
