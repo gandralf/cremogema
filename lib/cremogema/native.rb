@@ -7,7 +7,7 @@ class Cremogema
 private
   module Native
     extend FFI::Library
-    ffi_lib 'c'
+    ffi_lib File.dirname(__FILE__) + '/cremogema.bundle'
     attach_function :cremogema_alien_what, [ ], :string
   end
 end

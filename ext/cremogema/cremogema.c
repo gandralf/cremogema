@@ -1,6 +1,6 @@
 #include <ruby.h>
 
-static char* cremogema_alien_what() {
+char* cremogema_alien_what() {
 	return "a coisa mais gostosa do outro mundo";
 }
 
