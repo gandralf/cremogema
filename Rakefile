@@ -6,7 +6,7 @@ require 'rspec/core/rake_task'
 NAME = 'cremogema'
 
 # todo: deve haver um metodo melhor!
-if (RbConfig::CONFIG['host_os'] == 'darwin')
+if (RbConfig::CONFIG['host_os'] =~ /darwin/)
   LIB_EXT = 'bundle'
 elsif (RbConfig::CONFIG['host_os'] == 'windows')
   LIB_EXT = 'dll'
