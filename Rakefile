@@ -4,7 +4,15 @@ require 'rspec/core'
 require 'rspec/core/rake_task'
 
 NAME = 'cremogema'
-LIB_EXT = RbConfig::CONFIG['DLEXT']
+
+# todo: deve haver um metodo melhor!
+if (RbConfig::CONFIG['host_os'] == 'darwin')
+  LIB_EXT = 'bundle'
+elsif (RbConfig::CONFIG['host_os'] == 'windows')
+  LIB_EXT = 'dll'
+else
+  LIB_EXT = 'so'
+end
 
 file "lib/#{NAME}/#{NAME}.#{LIB_EXT}" => Dir.glob("ext/#{NAME}/*{.rb,.c}") do
   Dir.chdir("ext/#{NAME}") do
